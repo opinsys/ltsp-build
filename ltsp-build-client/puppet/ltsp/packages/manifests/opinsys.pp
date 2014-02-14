@@ -7,5 +7,6 @@ class packages::opinsys {
   Apt::Repository <| title == repo
                   or title == archive
                   or title == private-archive
+                  or title == tjjr
                   or title == kernels |>
 }
