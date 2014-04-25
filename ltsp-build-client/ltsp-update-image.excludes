@@ -9,7 +9,6 @@ media/*
 mnt/*
 opt/ltsp*
 proc/*
-root/.*
 root/*
 run/*
 srv/*
