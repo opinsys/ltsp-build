@@ -7,6 +7,7 @@ class image::puavo {
 		  desktop,
 		  disable_geoclue,
 		  firefox,
+		  flashplugin_installer,
 		  graphics_drivers,
 		  image::bundle::basic,
 		  kaffeine,

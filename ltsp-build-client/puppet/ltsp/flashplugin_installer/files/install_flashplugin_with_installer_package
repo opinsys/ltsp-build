@@ -1,0 +1,26 @@
+#!/bin/sh
+
+set -eu
+
+# XXX This should test if flashplugin has been installed properly before doing
+# XXX anything.  Also: update flashplugin if version has changed.
+
+tmpmntdir=$(mktemp -d /tmp/flashplugin_install.XXXXXXXXX)
+
+cleanup() {
+  for dir in sys proc dev/pts dev; do
+    umount $tmpmntdir/$dir 2>/dev/null || true
+  done
+  umount $tmpmntdir || true
+}
+
+trap cleanup 0
+
+mkdir -p /state/proprietary
+mount -t overlayfs -o upperdir=/state/proprietary,lowerdir=/rofs overlayfs $tmpmntdir
+for dir in dev dev/pts proc sys; do
+  mount -o bind /$dir $tmpmntdir/$dir
+done
+chroot $tmpmntdir dpkg -i /root/debs/flashplugin-installer_*.deb
+
+exit 0

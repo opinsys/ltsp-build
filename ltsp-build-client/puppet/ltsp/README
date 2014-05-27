@@ -31,6 +31,10 @@ espon_scanner
 firefox
     Settings for Firefox.
 
+flashplugin_installer
+    Install flash to system, by doing it later so that it is not distributed
+    in the device image.
+
 google-earth-stable
     Settings for a particular version of Google Earth.
 
