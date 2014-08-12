@@ -780,7 +780,7 @@ class packages {
       tag => [ 'utils', 'ubuntu', ];
 
     [ 'google-talkplugin'
-    , 'oracle-java'
+    , 'oracle-java-jdk'
     , 'xul-ext-flashblock' ]:
       tag => [ 'web', 'opinsys', ];
 
