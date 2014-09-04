@@ -45,6 +45,7 @@ class packages {
     , 'inotify-tools'
     , 'iperf'
     , 'libstdc++5'
+    , 'lshw'
     , 'lynx'
     , 'm4'
     , 'mlocate'
