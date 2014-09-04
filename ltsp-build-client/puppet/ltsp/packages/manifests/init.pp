@@ -850,7 +850,7 @@ class packages {
           with_dbg    => false,
           with_extra  => false;
 
-        '3.12.10.opinsys5':
+        '3.12.10.opinsys6':
           package_tag => 'opinsys',
           with_dbg    => true,
           with_extra  => false;
