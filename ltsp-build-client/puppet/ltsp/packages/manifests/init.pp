@@ -162,6 +162,7 @@ class packages {
 
     [ 'billard-gl'
     , 'cuyo'
+    , 'dosbox'
     , 'extremetuxracer'
     , 'foobillard'
     , 'freeciv-client-gtk'
