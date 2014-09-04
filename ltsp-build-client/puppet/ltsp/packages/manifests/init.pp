@@ -56,6 +56,7 @@ class packages {
     , 'sl'
     , 'strace'
     , 'sudo'
+    , 'sysstat'
     , 'tmux'
     , 'tshark'
     , 'whois'
