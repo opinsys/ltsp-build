@@ -24,7 +24,14 @@ trap cleanup EXIT
 
 # we use the Ubuntu quantal-distribution as a default
 distribution=${DISTRIBUTION:-quantal}
-mirror=http://localhost:3142/fi.archive.ubuntu.com/ubuntu
+case "${distribution}" in
+    quantal)
+        mirror=http://localhost:3142/old-releases.ubuntu.com/ubuntu
+        ;;
+    *)
+        mirror=http://localhost:3142/fi.archive.ubuntu.com/ubuntu
+        ;;
+esac
 
 # fasttmp should be mounted on a tmpfs partition
 buildtmp=/virtualtmp

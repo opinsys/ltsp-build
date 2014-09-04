@@ -5,8 +5,17 @@ case "$MODE" in
         ;;
     before-install)
         if [ "$ARCH" = "i386" ] || [ "$ARCH" = "amd64" ]; then
-            MIRROR=${MIRROR:-"http://archive.ubuntu.com/ubuntu"}
-            SECURITY_MIRROR=${SECURITY_MIRROR:-"http://security.ubuntu.com/ubuntu"}
+            case "${DIST}" in
+                quantal)
+                    MIRROR=${MIRROR:-"http://old-releases.ubuntu.com/ubuntu"}
+                    SECURITY_MIRROR=${SECURITY_MIRROR:-"http://old-releases.ubuntu.com/ubuntu"}
+                    ;;
+                *)
+                    MIRROR=${MIRROR:-"http://archive.ubuntu.com/ubuntu"}
+                    SECURITY_MIRROR=${SECURITY_MIRROR:-"http://security.ubuntu.com/ubuntu"}
+                    ;;
+            esac
+
         else
             MIRROR=${MIRROR:-"http://ports.ubuntu.com/ubuntu-ports"}
             SECURITY_MIRROR=${SECURITY_MIRROR:-"http://ports.ubuntu.com/ubuntu-ports"}
