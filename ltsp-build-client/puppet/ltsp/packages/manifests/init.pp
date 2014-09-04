@@ -52,6 +52,7 @@ class packages {
     , 'pv'
     , 'pwgen'
     , 'pwman3'
+    , 'screen'
     , 'setserial'
     , 'sl'
     , 'strace'
