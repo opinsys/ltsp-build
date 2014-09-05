@@ -99,6 +99,7 @@ class packages {
       tag => [ 'basic', 'ubuntu', ];
 
     [ 'quicktile'
+    , 'webkiosk-language-selector'
     , 'webmenu' ]:
       tag => [ 'desktop', 'opinsys', ];
 
